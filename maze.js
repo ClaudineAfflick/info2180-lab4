@@ -5,6 +5,7 @@ window.onload=function(){
   var end= document.getElementById("end");
   var status= document.getElementById("status");
   var start= document.getElementById("start");
+  var maze= document.getElementById("maze");
 
   boundary1.onmouseover = function(){
     boundary1.setAttribute("class", "boundary youlose");
@@ -13,7 +14,7 @@ window.onload=function(){
     walls[i].onmouseover = function(){
       for (var i = 0; i < walls.length-1; i++) {
         walls[i].setAttribute("class", "boundary youlose");
-        status.innerHTML ="You lose.";
+        status.innerHTML ="You lose. Click 'S' to try again.";
       }
     }
   }
@@ -30,4 +31,10 @@ window.onload=function(){
       status.innerHTML= "Move your mouse over the 'S' to begin.";
     }
 
+  maze.onmouseleave=function(){
+      for (var i = 0; i < walls.length-1; i++) {
+        walls[i].setAttribute("class", "boundary youlose");
+      }
+      status.innerHTML= "NO CHEATING!!!!! Click 'S' to restart";
+  }
 }
