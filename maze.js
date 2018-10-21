@@ -3,7 +3,8 @@ window.onload=function(){
   var boundary1= document.getElementById("boundary1");
   var walls = document.querySelectorAll(".boundary");
   var end= document.getElementById("end");
-  var status= document.getElementById("status")
+  var status= document.getElementById("status");
+  var start= document.getElementById("start");
 
   boundary1.onmouseover = function(){
     boundary1.setAttribute("class", "boundary youlose");
@@ -21,5 +22,12 @@ window.onload=function(){
             status.innerHTML =status.innerHTML="Congratulations!!!! YOU WON!!!!";
     }
   }
+
+  start.onclick= function(){
+    for (var i = 0; i < walls.length-1; i++) {
+			walls[i].setAttribute("class", "boundary");
+    }
+      status.innerHTML= "Move your mouse over the 'S' to begin.";
+    }
 
 }
