@@ -20,7 +20,7 @@ window.onload=function(){
   }
   end.onmouseover=function(){
      if(boundary1.getAttribute("class")!="boundary youlose"){
-            status.innerHTML =status.innerHTML="Congratulations!!!! YOU WON!!!!";
+            status.innerHTML =status.innerHTML="Congratulations!!!! YOU WON!!!!!";
     }
   }
 
