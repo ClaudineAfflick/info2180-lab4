@@ -35,6 +35,7 @@ window.onload=function(){
       for (var i = 0; i < walls.length-1; i++) {
         walls[i].setAttribute("class", "boundary youlose");
       }
-      status.innerHTML= "NO CHEATING!!!!! Click 'S' to restart";
+      status.innerHTML= "NO CHEATING!!!!! You Lose! Click 'S' to restart.";
   }
+
 }
